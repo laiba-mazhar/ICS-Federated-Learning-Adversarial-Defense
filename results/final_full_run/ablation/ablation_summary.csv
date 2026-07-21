@@ -1,0 +1,16 @@
+dataset,variant,final_acc,final_asr,time_s,out_dir
+MNIST,full_ics,0.7502,0.19751833051325438,70.5274748802185,C:\Users\laiba\ICS_results\final_full_run\ablation\MNIST__full_ics
+MNIST,no_ent,0.7058,0.23778905809362663,59.43247437477112,C:\Users\laiba\ICS_results\final_full_run\ablation\MNIST__no_ent
+MNIST,no_cons,0.775,0.1733784545967287,76.19636678695679,C:\Users\laiba\ICS_results\final_full_run\ablation\MNIST__no_cons
+MNIST,no_rep,0.7106,0.24230118443316412,84.20192623138428,C:\Users\laiba\ICS_results\final_full_run\ablation\MNIST__no_rep
+MNIST,global_cs_only,0.7121,0.23733784545967287,79.29128956794739,C:\Users\laiba\ICS_results\final_full_run\ablation\MNIST__global_cs_only
+EMNIST,full_ics,0.41585106382978726,0.3768478260869565,185.54176020622253,C:\Users\laiba\ICS_results\final_full_run\ablation\EMNIST__full_ics
+EMNIST,no_ent,0.4767021276595745,0.32467391304347826,158.53353786468506,C:\Users\laiba\ICS_results\final_full_run\ablation\EMNIST__no_ent
+EMNIST,no_cons,0.45085106382978724,0.32858695652173914,170.73997163772583,C:\Users\laiba\ICS_results\final_full_run\ablation\EMNIST__no_cons
+EMNIST,no_rep,0.46585106382978725,0.3346195652173913,172.1215476989746,C:\Users\laiba\ICS_results\final_full_run\ablation\EMNIST__no_rep
+EMNIST,global_cs_only,0.43361702127659574,0.37179347826086956,174.76216387748718,C:\Users\laiba\ICS_results\final_full_run\ablation\EMNIST__global_cs_only
+CIFAR10,full_ics,0.2252,0.6388888888888888,51.06445097923279,C:\Users\laiba\ICS_results\final_full_run\ablation\CIFAR10__full_ics
+CIFAR10,no_ent,0.1864,0.7677777777777778,52.124727964401245,C:\Users\laiba\ICS_results\final_full_run\ablation\CIFAR10__no_ent
+CIFAR10,no_cons,0.1554,0.8403333333333334,56.72744393348694,C:\Users\laiba\ICS_results\final_full_run\ablation\CIFAR10__no_cons
+CIFAR10,no_rep,0.1604,0.8573333333333333,58.3934166431427,C:\Users\laiba\ICS_results\final_full_run\ablation\CIFAR10__no_rep
+CIFAR10,global_cs_only,0.1344,0.9022222222222223,52.58070993423462,C:\Users\laiba\ICS_results\final_full_run\ablation\CIFAR10__global_cs_only

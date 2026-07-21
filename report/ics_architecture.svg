@@ -1,0 +1,149 @@
+<svg viewBox="0 0 400 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333" />
+    </marker>
+    <linearGradient id="clientGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="maliciousGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E74C3C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C0392B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="serverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#27AE60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#229954;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="200" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2C3E50">ICS-Enhanced Federated Learning Architecture</text>
+  
+  <!-- Federated Clients Section -->
+  <text x="200" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#34495E">Distributed Clients (n=15)</text>
+  
+  <!-- Benign Clients -->
+  <g id="benign-clients">
+    <rect x="30" y="55" width="70" height="50" rx="5" fill="url(#clientGrad)" stroke="#2C3E50" stroke-width="1.5"/>
+    <text x="65" y="73" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Client 1</text>
+    <text x="65" y="85" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">(Benign)</text>
+    <text x="65" y="97" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#E8F4F8">Local Data</text>
+    
+    <rect x="115" y="55" width="70" height="50" rx="5" fill="url(#clientGrad)" stroke="#2C3E50" stroke-width="1.5"/>
+    <text x="150" y="73" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Client 2</text>
+    <text x="150" y="85" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">(Benign)</text>
+    <text x="150" y="97" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#E8F4F8">Local Data</text>
+    
+    <text x="210" y="80" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7F8C8D">...</text>
+  </g>
+  
+  <!-- Malicious Clients -->
+  <g id="malicious-clients">
+    <rect x="240" y="55" width="70" height="50" rx="5" fill="url(#maliciousGrad)" stroke="#2C3E50" stroke-width="1.5"/>
+    <text x="275" y="73" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Client 14</text>
+    <text x="275" y="85" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">(Malicious)</text>
+    <text x="275" y="97" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#FFE5E5">Poisoned Data</text>
+    
+    <rect x="325" y="55" width="70" height="50" rx="5" fill="url(#maliciousGrad)" stroke="#2C3E50" stroke-width="1.5"/>
+    <text x="360" y="73" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Client 15</text>
+    <text x="360" y="85" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">(Malicious)</text>
+    <text x="360" y="97" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#FFE5E5">Poisoned Data</text>
+  </g>
+  
+  <!-- Local Training -->
+  <rect x="80" y="125" width="240" height="35" rx="4" fill="#ECF0F1" stroke="#34495E" stroke-width="1.5"/>
+  <text x="200" y="140" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#2C3E50">Local Training (1 epoch)</text>
+  <text x="200" y="152" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#7F8C8D">CNN Model: SGD, lr=0.01, batch=64</text>
+  
+  <!-- Upload arrows -->
+  <path d="M 65 105 L 65 125" stroke="#4A90E2" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 150 105 L 150 125" stroke="#4A90E2" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 275 105 L 275 125" stroke="#E74C3C" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 360 105 L 360 125" stroke="#E74C3C" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Model Updates -->
+  <path d="M 200 160 L 200 180" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="215" y="172" font-family="Arial, sans-serif" font-size="7" fill="#7F8C8D">Updates</text>
+  
+  <!-- Server Box -->
+  <rect x="50" y="185" width="300" height="450" rx="6" fill="#F8F9FA" stroke="#27AE60" stroke-width="2"/>
+  <rect x="50" y="185" width="300" height="30" rx="6" fill="url(#serverGrad)" stroke="#27AE60" stroke-width="2"/>
+  <text x="200" y="204" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">Central Server - ICS Defense Module</text>
+  
+  <!-- MI-FGSM Probe Generation -->
+  <rect x="70" y="230" width="260" height="50" rx="4" fill="#FFF3CD" stroke="#FFC107" stroke-width="1.5"/>
+  <text x="200" y="245" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#856404">Step 1: MI-FGSM Probe Generation</text>
+  <text x="200" y="257" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#856404">x'ᵗ⁺¹ = x'ᵗ + α·sign(∇ₓL(x'ᵗ,y))</text>
+  <text x="200" y="268" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#856404">ε=0.3 (MNIST), 0.06 (CIFAR-10), Steps=10</text>
+  <text x="200" y="276" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#856404">Per-class adversarial samples</text>
+  
+  <!-- ICS Evaluation -->
+  <rect x="70" y="295" width="260" height="80" rx="4" fill="#D4EDDA" stroke="#28A745" stroke-width="1.5"/>
+  <text x="200" y="310" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#155724">Step 2: ICS Component Evaluation</text>
+  
+  <!-- Four metrics in 2x2 grid -->
+  <rect x="80" y="318" width="110" height="22" rx="3" fill="white" stroke="#28A745" stroke-width="1"/>
+  <text x="135" y="327" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#155724">Output Consistency</text>
+  <text x="135" y="335" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#6C757D">(OC, w=0.45)</text>
+  
+  <rect x="210" y="318" width="110" height="22" rx="3" fill="white" stroke="#28A745" stroke-width="1"/>
+  <text x="265" y="327" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#155724">Confidence Score</text>
+  <text x="265" y="335" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#6C757D">(CONF, w=0.25)</text>
+  
+  <rect x="80" y="346" width="110" height="22" rx="3" fill="white" stroke="#28A745" stroke-width="1"/>
+  <text x="135" y="355" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#155724">Inverse Entropy</text>
+  <text x="135" y="363" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#6C757D">(1-ENT, w=0.15)</text>
+  
+  <rect x="210" y="346" width="110" height="22" rx="3" fill="white" stroke="#28A745" stroke-width="1"/>
+  <text x="265" y="355" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#155724">Pred. Consistency</text>
+  <text x="265" y="363" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#6C757D">(CONS, w=0.10)</text>
+  
+  <!-- ICS Score Computation -->
+  <rect x="70" y="390" width="260" height="45" rx="4" fill="#CCE5FF" stroke="#007BFF" stroke-width="1.5"/>
+  <text x="200" y="405" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#004085">Step 3: ICS Score Fusion</text>
+  <text x="200" y="417" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#004085">ICS[i,c] = w₁·OC + w₂·CONF + w₃·(1-ENT) + w₄·CONS</text>
+  <text x="200" y="427" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#004085">EMA Smoothing: α=0.9</text>
+  
+  <!-- Client Matrix Visualization -->
+  <rect x="70" y="450" width="260" height="60" rx="4" fill="#F8D7DA" stroke="#DC3545" stroke-width="1.5"/>
+  <text x="200" y="465" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#721C24">Step 4: Client-Class ICS Matrix</text>
+  
+  <!-- Simplified heatmap representation -->
+  <g transform="translate(85, 472)">
+    <text x="0" y="8" font-family="Arial, sans-serif" font-size="6" fill="#721C24">Client</text>
+    <rect x="35" y="0" width="12" height="12" fill="#27AE60" stroke="#000" stroke-width="0.5"/>
+    <rect x="49" y="0" width="12" height="12" fill="#27AE60" stroke="#000" stroke-width="0.5"/>
+    <rect x="63" y="0" width="12" height="12" fill="#229954" stroke="#000" stroke-width="0.5"/>
+    <text x="80" y="8" font-family="Arial, sans-serif" font-size="6" fill="#721C24">...</text>
+    <rect x="100" y="0" width="12" height="12" fill="#E74C3C" stroke="#000" stroke-width="0.5"/>
+    <rect x="114" y="0" width="12" height="12" fill="#C0392B" stroke="#000" stroke-width="0.5"/>
+    
+    <text x="0" y="23" font-family="Arial, sans-serif" font-size="6" fill="#721C24">1-13:</text>
+    <text x="33" y="23" font-family="Arial, sans-serif" font-size="6" fill="#27AE60">High ICS</text>
+    
+    <text x="100" y="23" font-family="Arial, sans-serif" font-size="6" fill="#721C24">14-15:</text>
+    <text x="133" y="23" font-family="Arial, sans-serif" font-size="6" fill="#E74C3C">Low ICS</text>
+  </g>
+  <text x="200" y="502" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#721C24">Classes (columns) × Clients (rows)</text>
+  
+  <!-- Weight Computation -->
+  <rect x="70" y="525" width="260" height="40" rx="4" fill="#FFF3CD" stroke="#FFC107" stroke-width="1.5"/>
+  <text x="200" y="540" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#856404">Step 5: Aggregation Weight Computation</text>
+  <text x="200" y="552" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#856404">αᵢ = exp(ICS̄ᵢ) / Σⱼ exp(ICS̄ⱼ)</text>
+  <text x="200" y="560" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#856404">Malicious clients → Low α (suppressed)</text>
+  
+  <!-- Selective Aggregation -->
+  <rect x="70" y="580" width="260" height="40" rx="4" fill="#D4EDDA" stroke="#28A745" stroke-width="1.5"/>
+  <text x="200" y="595" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#155724">Step 6: Selective FedAvg Aggregation</text>
+  <text x="200" y="607" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#155724">θᵍˡᵒᵇᵃˡ = Σᵢ αᵢ · θᵢˡᵒᶜᵃˡ</text>
+  <text x="200" y="615" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#155724">Robust model update</text>
+  
+  <!-- Output arrow -->
+  <path d="M 200 635 L 200 655" stroke="#27AE60" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Updated Global Model -->
+  <rect x="120" y="660" width="160" height="30" rx="4" fill="url(#serverGrad)" stroke="#27AE60" stroke-width="2"/>
+  <text x="200" y="673" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Updated Global Model</text>
+  <text x="200" y="684" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="white">Robust to poisoning attacks</text>
+</svg>

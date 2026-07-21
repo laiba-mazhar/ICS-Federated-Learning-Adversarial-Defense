@@ -1,0 +1,32 @@
+{
+  "config": {
+    "datasets": [
+      "MNIST"
+    ],
+    "num_clients": 5,
+    "rounds": 5,
+    "local_epochs": 1,
+    "batch_size": 32,
+    "attack_ratio": 0.2,
+    "attack_type": "targeted_label_flip",
+    "target_label": 1,
+    "S_per_class": 4,
+    "mi_fgsm_steps": 6,
+    "mi_fgsm_alpha": 0.5,
+    "mi_fgsm_eps": 0.01568627450980392,
+    "ics_weights": [
+      0.45,
+      0.25,
+      0.15,
+      0.1,
+      0.05
+    ],
+    "ema_alpha": 0.3,
+    "tau": 5.0,
+    "seed": 42,
+    "save_dir": "C:\\Users\\laiba\\ICS_results",
+    "use_rep": false,
+    "use_amp": true,
+    "verbose": true
+  }
+}

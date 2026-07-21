@@ -1,0 +1,6 @@
+dataset,variant,final_acc,final_asr,time_s,out_dir
+MNIST,full_ics,0.741,0.2056401579244219,79.95330953598022,C:\Users\laiba\ICS_results\ablation\MNIST__full_ics
+MNIST,no_ent,0.7468,0.20191765369430345,75.62745833396912,C:\Users\laiba\ICS_results\ablation\MNIST__no_ent
+MNIST,no_cons,0.7709,0.16694867456288776,80.68036031723022,C:\Users\laiba\ICS_results\ablation\MNIST__no_cons
+MNIST,no_rep,0.7066,0.23959390862944163,113.42236852645874,C:\Users\laiba\ICS_results\ablation\MNIST__no_rep
+MNIST,global_cs_only,0.7468,0.1757473209249859,88.04914355278015,C:\Users\laiba\ICS_results\ablation\MNIST__global_cs_only
